@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav" class="ui menu">
-      <router-link class="item" to="/">首頁</router-link>
-      <router-link class="item" to="/about">關於</router-link>
-      <router-link class="item" to="/aquarium">水族類</router-link>
-      <router-link class="item" to="/reptiles">爬蟲類</router-link>
-      <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
+      <router-link class="item" to="/">首頁</router-link>|
+      <router-link class="item" to="/about">關於</router-link>|
+      <router-link class="item" to="/aquarium">水族類</router-link>|
+      <router-link class="item" to="/reptiles">爬蟲類</router-link>|
+      <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>|
     </div>
     <router-view/>
   </div>
