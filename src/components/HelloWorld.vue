@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-  <vue-headful title="首頁"/>
-
   </div>
 </template>
 
