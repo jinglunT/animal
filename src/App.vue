@@ -20,10 +20,6 @@
   color: #fff;
 }
 
-#nav {
-  padding: 30px;
-}
-
 #nav a {
   font-weight: bold;
   color: #fff;
