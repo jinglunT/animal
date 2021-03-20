@@ -2,10 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">首頁</router-link> |
-      <router-link to="/about">關於</router-link>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <router-link to="/aqua">Aquarium</router-link>
+      <router-link to="/about">關於</router-link>|
+      <router-link to="/aquarium">水族類</router-link>|
+      <router-link to="/reptiles">爬蟲類</router-link>|
+      <router-link to="/insect">昆蟲與節肢動物</router-link>|
     </div>
     <router-view/>
   </div>
@@ -17,7 +17,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
 }
 
 #nav {
@@ -26,10 +26,13 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+body {
+  background-color: #272a29
 }
 </style>
