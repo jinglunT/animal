@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
   <vue-headful title="首頁"/>
-    <img class = "fat-only" :src="'./static/首頁背景.JPG'"/>
-    <img class = "thin-only" :src="'./static/首頁背景.JPG'"/>
+  <img :src="'/IMG_4451.jpg'">
   </div>
 </template>
 
