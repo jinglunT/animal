@@ -2,14 +2,26 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Aquarium from '../components/Aquarium.vue'
+import Reptiles from '../components/Reptiles.vue'
+import Insect from '../components/Insect.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/aqua',
+    path: '/aquarium',
     name: 'Aquarium',
     component: Aquarium
+  },
+    {
+    path: '/reptiles',
+    name: 'Reptiles',
+    component: Reptiles
+  },
+    {
+    path: '/insect',
+    name: 'Insect',
+    component: Insect
   },
    {
     path: '/',
