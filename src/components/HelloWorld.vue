@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+  <vue-headful title="首頁"/>
+  <img :src="'/IMG_5390.JPG'">
   </div>
 </template>
 
@@ -14,16 +16,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
+img {
+  width:80%
 }
 a {
   color: #42b983;
