@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
   <vue-headful title="首頁"/>
-    <img class = "fat-only" :src="'./static/首頁背景.JPG'"/>
-    <img class = "thin-only" :src="'./static/首頁背景.JPG'"/>
+    <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
   </div>
 </template>
 
@@ -30,5 +29,8 @@ li {
 }
 a {
   color: #42b983;
+}
+img {
+  width: 60%;
 }
 </style>
