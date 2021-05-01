@@ -2,6 +2,7 @@
   <div class="hello">
   <vue-headful title="首頁"/>
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
+    <p>紫身枝牙蝦虎</p>
   </div>
 </template>
 
