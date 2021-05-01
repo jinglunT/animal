@@ -31,4 +31,8 @@
 body {
   background-color: #272a29
 }
+
+img {
+  border-radius: 15px;
+}
 </style>
