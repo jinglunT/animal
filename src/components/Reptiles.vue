@@ -2,6 +2,7 @@
   <div class="hello">
   <vue-headful title="首頁"/>
   <img :src="'/IMG_4451.jpg'">
+  <p>睫角守宮</p>
   </div>
 </template>
 
