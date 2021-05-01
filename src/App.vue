@@ -32,7 +32,7 @@ body {
   background-color: #272a29
 }
 
-img {
+img, iframe {
   border-radius: 15px;
 }
 </style>
