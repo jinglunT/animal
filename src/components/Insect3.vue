@@ -1,10 +1,6 @@
 <template>
   <div class="hello">
   <vue-headful title="首頁"/>
-<router-link to ="/insect2" target="_blank">印尼金鍬</router-link>
-<br>
-<router-link to ="/insect3" target="_blank">櫻桃紅蟑</router-link>
-<br>
     <img class = "fat-only" :src="'./DSC09821.JPG'"/>
     <p>白條綠金龜</p>
   </div>
