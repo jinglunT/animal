@@ -6,3 +6,8 @@
     <iframe width="700" height="394" src="https://www.youtube.com/embed/O4-5gxL6kLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </template>
+<style scoped="">
+iframe {
+	margin: 1em
+}
+</style>
