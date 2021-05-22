@@ -1,8 +1,28 @@
 <template>
   <div class="hello">
   <vue-headful title="首頁"/>
+      <div class="ui grid container">
+      <div class="ui row">
+        <div class="column">
+          <img class = "small" :src="'./IMG_9503.JPG'"/>
+        </div>
+        <div class="ten wide column">
+          <router-link to ="/aquarium2" target="_blank">羅氏裸身蝦虎</router-link>
+        </div>
+      </div>
+      <div class="ui row">
+        <div class="column">
+          <img class = "small" :src="'./IMG_9503.JPG'"/>
+        </div>
+        <div class="ten wide column">
+          <router-link to ="/aquarium3" target="_blank">短吻紅斑吻蝦虎</router-link>
+        </div>
+      </div>
+      <div class="ui row">
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
     <p>紫身枝牙蝦虎</p>
+        </div>
+     </div>
   </div>
 </template>
 
