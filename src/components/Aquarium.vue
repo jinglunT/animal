@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+  <vue-headful title="首頁"/>
       <div class="ui grid container">
       <div class="ui row">
         <div class="column">
