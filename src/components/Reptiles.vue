@@ -54,6 +54,6 @@ img {
   width: 60%;
 }
 img.small {
-  width: 300px;
+  width: 800px;
 }
 </style>
