@@ -32,6 +32,10 @@ body {
   background-color: #272a29
 }
 
+.ui.grid>.row>.column>img, .ui.grid>.row>img{
+  max-width: 100vw;
+}
+
 img, iframe {
   border-radius: 15px;
 }
