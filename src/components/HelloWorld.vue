@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-  <vue-headful title="首頁"/>
   <img :src="'/IMG_5390.jpg'">
   </div>
 </template>
