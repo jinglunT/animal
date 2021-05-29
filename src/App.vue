@@ -22,7 +22,8 @@
 
 #nav a {
   font-weight: bold;
-  color: #272a29
+  color: #272a29;
+  font-size: 20px
 }
 
 #nav a.router-link-exact-active {
@@ -38,5 +39,8 @@ body {
 
 img, iframe {
   border-radius: 15px;
+}
+a {
+  font-size: 23px
 }
 </style>

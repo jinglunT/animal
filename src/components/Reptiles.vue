@@ -6,7 +6,7 @@
           <img class = "small" :src="'./IMG_7680.JPG'"/>
         </div>
         <div class="ten wide column">
-          <router-link to ="/reptiles2" target="_blank">豹紋守宮</router-link>
+          <router-link to ="/reptiles2" target="_blank">豹紋守宮 Eublepharis macularius</router-link>
         </div>
       </div>
       <div class="ui row">
@@ -14,7 +14,7 @@
           <img class = "small" :src="'./IMG_7719.JPG'"/>
         </div>
         <div class="ten wide column">
-          <router-link to ="/reptiles3" target="_blank">肥尾守宮</router-link>
+          <router-link to ="/reptiles3" target="_blank">肥尾守宮 Hemitheconyx caudicinctus</router-link>
         </div>
       </div>
       <div class="ui row">
