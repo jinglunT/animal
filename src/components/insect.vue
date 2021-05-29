@@ -56,6 +56,6 @@ img {
 }
 
 img.small {
-  width: 200px;
+  width: 300px;
 }
 </style>
