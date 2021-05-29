@@ -12,7 +12,7 @@
       </div>
       <div class="ui row">
         <div class="column">
-          <img class = "small" :src="'./IMG_4451.JPG'"/>
+          <img class = "small" :src="'./IMG_7719.JPG'"/>
         </div>
         <div class="ten wide column">
           <router-link to ="/reptiles3" target="_blank">肥尾守宮</router-link>
