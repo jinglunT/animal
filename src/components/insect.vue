@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="ui grid container">
       <div class="ui row">
-        <div class="column">
+        <div class="six wide column">
           <img class = "small" :src="'./DSC09821.JPG'"/>
         </div>
         <div class="ten wide column">
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="ui row">
-        <div class="column">
+        <div class="six wide column">
           <img class = "small" :src="'./DSC09821.JPG'"/>
         </div>
         <div class="ten wide column">
@@ -55,6 +55,6 @@ img {
 }
 
 img.small {
-  width: 300px;
+  width: 100%;
 }
 </style>
