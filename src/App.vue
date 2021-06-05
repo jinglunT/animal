@@ -43,4 +43,7 @@ img, iframe {
 a {
   font-size: 23px
 }
+.name {
+  padding-top: 3em
+}
 </style>

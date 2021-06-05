@@ -6,7 +6,7 @@
         <div class="six wide column">
           <img class = "small" :src="'./IMG_9503.JPG'"/>
         </div>
-        <div class="ten wide column">
+        <div class="ten wide column name">
           <router-link to ="/aquarium2" target="_blank">羅氏裸身蝦虎</router-link>
         </div>
       </div>

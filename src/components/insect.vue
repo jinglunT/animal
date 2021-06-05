@@ -6,15 +6,15 @@
         <div class="six wide column">
           <img class = "small" :src="'./DSC09821.JPG'"/>
         </div>
-        <div class="ten wide column">
+        <div class="ten wide column name">
           <router-link to ="/insect2" target="_blank">印尼金鍬</router-link>
         </div>
       </div>
       <div class="ui row">
-        <div class="six wide column">
+        <div class="six wide column name">
           <img class = "small" :src="'./DSC09821.JPG'"/>
         </div>
-        <div class="ten wide column">
+        <div class="ten wide column name">
           <router-link to ="/insect3" target="_blank">櫻桃紅蟑</router-link>
         </div>
       </div>
