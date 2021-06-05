@@ -51,4 +51,8 @@ p {
   margin-left: 31%;
   margin-top: 2em
 }
+
+hr {
+  width: 100%;
+}
 </style>
