@@ -44,6 +44,11 @@ a {
   font-size: 23px
 }
 .name {
-  padding-top: 3em
+  padding-top: 2em
+}
+p {
+  text-align: left;
+  margin-left: 31%;
+  margin-top: 2em
 }
 </style>
