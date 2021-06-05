@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="ui row">
-        <div class="six wide column name">
+        <div class="six wide column">
           <img class = "small" :src="'./IMG_7719.JPG'"/>
         </div>
         <div class="ten wide column name">
