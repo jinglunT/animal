@@ -46,6 +46,13 @@ a {
 .name {
   padding-top: 2em
 }
+
+
+h2, h4 {
+  text-align: left;
+  margin-left: 31%;
+}
+
 p {
   text-align: left;
   margin-left: 31%;
