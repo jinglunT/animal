@@ -2,7 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Aquarium from '../components/Aquarium.vue'
+import Aquarium2 from '../components/Aquarium2.vue'
+import Aquarium3 from '../components/Aquarium3.vue'
 import Reptiles from '../components/Reptiles.vue'
+import Reptiles2 from '../components/Reptiles2.vue'
+import Reptiles3 from '../components/Reptiles3.vue'
 import Insect from '../components/Insect.vue'
 import Insect2 from '../components/Insect2.vue'
 import Insect3 from '../components/Insect3.vue'
@@ -15,10 +19,30 @@ const routes = [
     name: 'Aquarium',
     component: Aquarium
   },
+   {
+    path: '/aquarium2',
+    name: 'Aquarium2',
+    component: Aquarium2
+  },
+   {
+    path: '/aquarium3',
+    name: 'Aquarium3',
+    component: Aquarium3
+  },
     {
     path: '/reptiles',
     name: 'Reptiles',
     component: Reptiles
+  },
+    {
+    path: '/reptiles2',
+    name: 'Reptiles2',
+    component: Reptiles2
+  },
+    {
+    path: '/reptiles3',
+    name: 'Reptiles3',
+    component: Reptiles3
   },
     {
     path: '/insect',
