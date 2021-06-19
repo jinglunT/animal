@@ -10,6 +10,7 @@
           <router-link to ="/insect2" target="_blank">印尼金鍬</router-link>
         </div>
       </div>
+      <hr>
       <div class="ui row">
         <div class="six wide column">
           <img class = "small" :src="'./DSC09821.JPG'"/>

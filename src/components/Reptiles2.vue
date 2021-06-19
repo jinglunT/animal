@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
-  <img :src="'/IMG_4451.jpg'">
-  <p>睫角守宮</p>
+  <img :src="'/IMG_7680.JPG.jpg'">
+  <p>豹紋守宮</p>
+  <p>飼養環境 : </p>
+  <p>飼養豹紋守宮其實非常簡單，只要做好功課就能讓牠在你/妳身旁陪伴好幾年了，</p>
   </div>
 </template>
 

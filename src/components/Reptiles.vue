@@ -12,7 +12,7 @@
           <p>幾件事，就可以讓牠們過得很好了。</p>
         </div>
       </div>
-      <hr>
+      
       <div class="ui row">
         <div class="six wide column">
           <img class = "small" :src="'./IMG_7719.JPG'"/>
