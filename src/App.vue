@@ -8,8 +8,29 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>|
     </div>
     <router-view/>
+    <div v-for="(p,idx) in post" :key="idx">
+      <h3>{{p.user}}說:{{p.text}}</h3>
+    </div>
   </div>
 </template>
+
+<script type="text/javascript">
+  
+import { db } from './db'
+
+export default {
+  data() {
+    return {
+      post: [],
+    }
+  },
+
+  firestore: {
+    post: db.collection('post'),
+  },
+}
+
+</script>
 
 <style>
 #app {
