@@ -9,20 +9,11 @@
       <router-link class="item" to="/post">發文</router-link>|
     </div>
     <router-view/>
-    <div v-for="(p,idx) in post" :key="idx">
-      <h3>{{p.user}}說:{{p.text}}</h3>
-    </div>
-    <form>
-      <input type="text" name="" v-model="name" placeholder="您的大名" />
-      <input type="text" name="" v-model="text" placeholder="內容文字" />
-      <button @click="add()">發文!</button>
-    </form>
   </div>
 </template>
 
 <script type="text/javascript">
   
-import { db } from './db'
 
 export default {
   data() {
@@ -33,24 +24,7 @@ export default {
     }
   },
 
-  firestore: {
-    post: db.collection('post'),
-  },
-
   methods: {
-    add() {
-      db.collection('post').doc(new Date().toString()).set({
-        user: this.name,
-        text: this.text,
-        time: new Date()
-      })
-      .then(() => {
-          console.log("Document successfully written!");
-      })
-      .catch((error) => {
-          console.error("Error writing document: ", error);
-      })
-    }
   }
 }
 
