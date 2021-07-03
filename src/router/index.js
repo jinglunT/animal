@@ -11,11 +11,17 @@ import Insect from '../components/Insect.vue'
 import Insect2 from '../components/Insect2.vue'
 import Insect3 from '../components/Insect3.vue'
 import Post from '../components/Post.vue'
+import P from '../components/P.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/p/:id',
+    name: 'P',
+    component: P
+  },
   {
     path: '/post',
     name: 'Post',

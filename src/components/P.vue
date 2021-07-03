@@ -1,17 +1,11 @@
 <template>
   <div>
-    <div id="editor">    
-      <textarea v-model="input"></textarea>
-      <vue-markdown :source = "input"></vue-markdown>
+    <div id="editor"> 
+      <div v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx" v-show="idx == $route.params.id">
+        <h1>{{p.user}}說:</h1>
+        <vue-markdown>{{p.text}}</vue-markdown>
+      </div>
     </div>
-
-    <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
-      <div>{{p.user}}說:{{p.text}}</div>
-    </router-link>
-    <form>
-      <input type="text" name="" v-model="name" placeholder="您的大名" />
-      <a @click="add()">發文!</a>
-    </form>
   </div>
 </template>
 
