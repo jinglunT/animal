@@ -74,7 +74,7 @@ h2, h4 {
 
 p {
   text-align: left;
-  margin-left: 31%;
+  /* margin-left: 31%; */
   margin-top: 2em
 }
 
