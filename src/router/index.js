@@ -10,10 +10,17 @@ import Reptiles3 from '../components/Reptiles3.vue'
 import Insect from '../components/Insect.vue'
 import Insect2 from '../components/Insect2.vue'
 import Insect3 from '../components/Insect3.vue'
+import Post from '../components/Post.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/post',
+    name: 'Post',
+    component: Post
+  },
   {
     path: '/aquarium',
     name: 'Aquarium',

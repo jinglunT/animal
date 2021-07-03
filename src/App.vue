@@ -6,6 +6,7 @@
       <router-link class="item" to="/aquarium">水族類</router-link>|
       <router-link class="item" to="/reptiles">爬蟲類</router-link>|
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>|
+      <router-link class="item" to="/post">發文</router-link>|
     </div>
     <router-view/>
     <div v-for="(p,idx) in post" :key="idx">
