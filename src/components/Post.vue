@@ -41,7 +41,7 @@ export default {
   methods: {
     add() {
       console.log(this.input)
-      db.collection('post').doc(new Date().toString()).set({
+      db.collection('post').doc(new Date().getTime()+"").set({
         user: this.name,
         text: this.input,
         time: new Date()
