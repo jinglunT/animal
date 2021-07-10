@@ -1,7 +1,12 @@
 <template>
   <div class="hello">
     <vue-headful title="首頁"/>
-    <div class="ui grid container">
+     <div class="ui grid container">
+      <div v-for="(p,idx) in post" class="ui row" :class="{hidden: p.type != '水族類' }" :key="idx">
+        <router-link :to = "'/p/' + idx">
+          <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
+        </router-link>
+      </div>
       <div class="ui row">
         <div class="six wide column">
           <img class = "small" :src="'./DSC09821.JPG'"/>
