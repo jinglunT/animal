@@ -1,9 +1,9 @@
 <template>
   <div>
     <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
-      <div>{{p.user}}說:{{p.text.substr(0,20)}}</div>
+      <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
     </router-link>
-    
+
     <div id="editor">    
       <textarea v-model="input"></textarea>
       <vue-markdown :source = "input"></vue-markdown>
