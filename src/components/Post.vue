@@ -6,7 +6,7 @@
     </div>
 
     <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
-      <div>{{p.user}}說:{{p.text.substr(0,5)}}</div>
+      <div>{{p.user}}說:{{p.text.substr(0,20)}}</div>
     </router-link>
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
