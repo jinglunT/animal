@@ -16,9 +16,9 @@
         <option>昆蟲與節肢動物類</option>
       </select>
 
-      <img :src = "previewImage" class="uploading-image" />
+      <img :src = "previewImage" class="uploading-image" v-show="hasImage" />
       圖片:
-      <input type="file" accept="image/*" @change="uploadImage($event)" id="file-input">
+      <image-uploader @input="setImage"></image-uploader>
 
       <a class ="ui green button" @click="add()">發文!</a>
     </form>
@@ -33,6 +33,7 @@
 
 <script>
 
+import ImageUploader from 'vue-image-upload-resize'
 import VueMarkdown from 'vue-markdown';
 import { db } from '../db'
 
@@ -45,10 +46,12 @@ export default {
     post: db.collection('post'),
   },
   components: {
-    VueMarkdown
+    VueMarkdown,
+    ImageUploader
   },
   data(){
     return {
+      hasImage: false,
       previewImage:null,
       post: [],
       img: '',
@@ -58,6 +61,10 @@ export default {
     }
   },
   methods: {
+    setImage: function (file) {
+      this.hasImage = true
+      this.previewImage = file
+    },
     uploadImage(e){
         const image = e.target.files[0];
         const reader = new FileReader();
