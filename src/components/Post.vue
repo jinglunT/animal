@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h3>發文規範</h3>
+    <ol>
+      <li>請記得附圖片</li>
+    </ol>
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
       類別:
@@ -124,5 +128,10 @@ a {
 
 .uploading-image {
   width: 200px;
+}
+
+ol {
+  width: 300px;
+  margin: 0 auto;
 }
 </style>
