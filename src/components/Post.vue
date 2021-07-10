@@ -21,7 +21,7 @@
       圖片:
       <input type="file" accept="image/*" @change="uploadImage($event)" id="file-input">
 
-      <a @click="add()">發文!</a>
+      <a class ="ui green button" @click="add()">發文!</a>
     </form>
 
     <div id="editor">    
