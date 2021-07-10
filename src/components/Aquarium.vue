@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
-  <vue-headful title="首頁"/>
-      <div class="ui grid container">
+    <div class="ui grid container">
+      <div v-for="(p,idx) in post" class="ui row" :class="{hidden: p.type != '水族類' }" :key="idx">
+        <router-link :to = "'/p/' + idx">
+          <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
+        </router-link>
+      </div>
       <div class="ui row">
         <div class="six wide column">
           <img class = "small" :src="'./IMG_9503.JPG'"/>
@@ -20,19 +24,24 @@
         </div>
       </div>
       <div class="ui row">
-    <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
-    <p>紫身枝牙蝦虎</p>
-        </div>
-     </div>
+        <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
+        <p>紫身枝牙蝦虎</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { db } from '../db'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  firestore: {
+    post: db.collection('post'),
+  },
 }
 </script>
 
@@ -57,5 +66,9 @@ img {
 }
 img.small {
   width: 100%;
+}
+
+.hidden {
+  display: none !important;
 }
 </style>

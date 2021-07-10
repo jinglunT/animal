@@ -1,14 +1,16 @@
 <template>
   <div>
-    <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
-      <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
-    </router-link>
-
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
+      類別:
+      <select name="" v-model="type" placeholder="類別">
+        <option>水族類</option>
+        <option>爬蟲類</option>
+        <option>昆蟲與節肢動物類</option>
+      </select>
       <a @click="add()">發文!</a>
     </form>
-    
+
     <div id="editor">    
       <textarea v-model="input"></textarea>
       <vue-markdown :source = "input"></vue-markdown>
@@ -36,6 +38,7 @@ export default {
   data(){
     return {
       post: [],
+      type: '水族類',
       name: '訪客',
       input: '# hello'      
     }
@@ -45,6 +48,7 @@ export default {
       console.log(this.input)
       db.collection('post').doc(new Date().getTime()+"").set({
         user: this.name,
+        type: this.type,
         text: this.input,
         time: new Date()
       })
@@ -54,6 +58,7 @@ export default {
       .catch((error) => {
           console.error("Error writing document: ", error);
       })
+      this.input = '# hello'
     }
   }
 }
