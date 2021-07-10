@@ -8,12 +8,13 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
     </div>
-    <router-view/>
+    <router-view :post="post"/>
   </div>
 </template>
 
 <script type="text/javascript">
   
+import { db } from './db'
 
 export default {
   data() {
@@ -23,7 +24,9 @@ export default {
       text: '',
     }
   },
-
+  firestore: {
+    post: db.collection('post'),
+  },
   methods: {
   }
 }

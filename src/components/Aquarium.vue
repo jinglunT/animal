@@ -32,15 +32,11 @@
 </template>
 
 <script>
-import { db } from '../db'
-
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
-  },
-  firestore: {
-    post: db.collection('post'),
+    msg: String,
+    post: Array
   },
 }
 </script>
