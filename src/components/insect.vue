@@ -2,7 +2,7 @@
   <div class="hello">
     <vue-headful title="首頁"/>
      <div class="ui grid container">
-      <div v-for="(p,idx) in post" class="ui row" :class="{hidden: p.type != '水族類' }" :key="idx">
+      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '昆蟲與節肢動物類' }" >
         <router-link :to = "'/p/' + idx">
           <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
         </router-link>
@@ -36,7 +36,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    post: Array
   }
 }
 </script>
@@ -63,5 +64,14 @@ img {
 
 img.small {
   width: 100%;
+}
+.hidden {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+.hidden * {
+  color: transparent !important;
 }
 </style>
