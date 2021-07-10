@@ -4,15 +4,16 @@
       <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
     </router-link>
 
+    <form>
+      <input type="text" name="" v-model="name" placeholder="您的大名" />
+      <a @click="add()">發文!</a>
+    </form>
+    
     <div id="editor">    
       <textarea v-model="input"></textarea>
       <vue-markdown :source = "input"></vue-markdown>
     </div>
 
-    <form>
-      <input type="text" name="" v-model="name" placeholder="您的大名" />
-      <a @click="add()">發文!</a>
-    </form>
   </div>
 </template>
 
