@@ -135,7 +135,7 @@ a {
 }
 
 ol {
-  width: 300px;
+  width: 600px;
   margin: 0 auto;
 }
 </style>
