@@ -8,6 +8,11 @@
         <option>爬蟲類</option>
         <option>昆蟲與節肢動物類</option>
       </select>
+      圖片:
+
+      <img :src = "previewImage" class="uploading-image" />
+      <input type="file" accept="image/*" @change="uploadImage($event)" id="file-input">
+
       <a @click="add()">發文!</a>
     </form>
 
@@ -37,17 +42,29 @@ export default {
   },
   data(){
     return {
+      previewImage:null,
       post: [],
+      img: '',
       type: '水族類',
       name: '訪客',
       input: '# hello'      
     }
   },
   methods: {
+    uploadImage(e){
+        const image = e.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(image);
+        reader.onload = e =>{
+            this.previewImage = e.target.result;
+            console.log(this.previewImage);
+        };
+    },
     add() {
       console.log(this.input)
       db.collection('post').doc(new Date().getTime()+"").set({
         user: this.name,
+        img: this.previewImage,
         type: this.type,
         text: this.input,
         time: new Date()
@@ -103,5 +120,9 @@ code {
 a {
   font-size: 14px;
   cursor: pointer;
+}
+
+.uploading-image {
+  width: 200px;
 }
 </style>

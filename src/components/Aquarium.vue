@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
     <div class="ui grid container">
-      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '水族類' }" >
+      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '水族類' || !p.img}" >
         <router-link :to = "'/p/' + idx">
+
+          <img class = "tiny" :src="p.img"/>
           <div>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
         </router-link>
       </div>
@@ -71,6 +73,11 @@ img.small {
 }
 
 .hidden * {
-  color: transparent !important;
+  display: none !important;
+}
+
+img.tiny {
+  height: 6em;
+  width: auto;
 }
 </style>
