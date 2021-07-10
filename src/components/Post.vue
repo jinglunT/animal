@@ -134,7 +134,12 @@ a {
 }
 
 ol {
-  width: 300px;
+  width: 600px;
   margin: 0 auto;
+  text-align: left;
+}
+
+ol li {
+  text-align: left;
 }
 </style>
