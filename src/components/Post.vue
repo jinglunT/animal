@@ -137,5 +137,10 @@ a {
 ol {
   width: 600px;
   margin: 0 auto;
+  text-align: left;
+}
+
+ol li {
+  text-align: left;
 }
 </style>
