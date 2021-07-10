@@ -12,9 +12,9 @@
         <option>爬蟲類</option>
         <option>昆蟲與節肢動物類</option>
       </select>
-      圖片:
 
       <img :src = "previewImage" class="uploading-image" />
+      圖片:
       <input type="file" accept="image/*" @change="uploadImage($event)" id="file-input">
 
       <a @click="add()">發文!</a>
