@@ -1,13 +1,14 @@
 <template>
   <div>
+    <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
+      <div>{{p.user}}說:{{p.text.substr(0,20)}}</div>
+    </router-link>
+    
     <div id="editor">    
       <textarea v-model="input"></textarea>
       <vue-markdown :source = "input"></vue-markdown>
     </div>
 
-    <router-link v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx">
-      <div>{{p.user}}說:{{p.text.substr(0,20)}}</div>
-    </router-link>
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
       <a @click="add()">發文!</a>
