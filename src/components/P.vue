@@ -83,12 +83,11 @@ a {
 }
 
 img {
-  width: 33vw;
-  float: left;
+  width: 25vw;
 }
 
 .inline {
-  width: 50vw !important;
-  display: inline-block;
+  width: 62vw !important;
+  display: block;
 }
 </style>
