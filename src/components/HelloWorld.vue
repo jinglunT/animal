@@ -1,9 +1,17 @@
 <template>
   <div class="hello">
+    <h1>
+      <img class="center" :src="'./首頁背景.JPG'" />
+    </h1>
     <div class="ui container">
-      <img :src="'./首頁背景.JPG'" />
+
+      <div class="ui form">
+        <div class="ui input">
+          <input type="text" name="" v-model="key" placeholder="關鍵字查詢" />
+        </div>
+      </div>
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !p.img}">
-        <router-link :to = "'/p/' + idx">
+        <router-link :to = "'/p/' + idx" v-show="(!key || (p.user + p.text).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
         </router-link>
       </div>
@@ -18,13 +26,23 @@ export default {
     msg: String,
     post: Array
   },
+  data () {
+    return {
+      key: ''
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+h1 {
+  text-align: center;
+}
+
 img {
-  width:60%
+  width:60%;
 }
 
 img.tiny {
@@ -48,5 +66,10 @@ div {
 
 .hidden * {
   display: none !important;
+}
+
+.center {
+  float: none;
+  margin: 0 auto;
 }
 </style>
