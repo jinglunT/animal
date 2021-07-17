@@ -2,8 +2,9 @@
   <div>
     <div id="editor"> 
       <div v-for="(p,idx) in post" :to = "'/p/' + idx" :key="idx" v-show="idx == $route.params.id">
+        <img :src="p.img" />
         <h1>{{p.user}}說:</h1>
-        <vue-markdown>{{p.text}}</vue-markdown>
+        <vue-markdown class="inline">{{p.text}}</vue-markdown>
       </div>
     </div>
   </div>
@@ -63,7 +64,6 @@ export default {
 textarea,
 #editor div {
   display: inline-block;
-  width: 95%;
   height: 100%;
   vertical-align: top;
   box-sizing: border-box;
@@ -78,5 +78,14 @@ code {
 a {
   font-size: 14px;
   cursor: pointer;
+}
+
+img {
+  width: 33%;
+  float: left;
+}
+
+.inline {
+  display: inline-block;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img :src="'./首頁背景.JPG'" />
-    <div v-for="(p,idx) in post" class="ui row" :key="idx">
+    <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !p.img}">
       <router-link :to = "'/p/' + idx">
         <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
       </router-link>
@@ -35,5 +35,15 @@ a {
 
 div {
   line-height: 1.2;
+}
+
+.hidden {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+.hidden * {
+  display: none !important;
 }
 </style>
