@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-  <img :src="'./首頁背景.JPG'" />
+    <img :src="'./首頁背景.JPG'" />
     <div v-for="(p,idx) in post" class="ui row" :key="idx">
       <router-link :to = "'/p/' + idx">
         <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
@@ -24,7 +24,16 @@ export default {
 img {
   width:30%
 }
+
+img.tiny {
+    width: 2em;
+}
+
 a {
   color: #42b983;
+}
+
+div {
+  line-height: 1.2;
 }
 </style>

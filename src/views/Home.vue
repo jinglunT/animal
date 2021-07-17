@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" :post="post"/>
   </div>
 </template>
 
@@ -12,6 +12,9 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
-  }
+  },
+  props: {
+    post: Array
+  },
 }
 </script>
