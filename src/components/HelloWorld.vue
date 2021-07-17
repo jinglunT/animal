@@ -1,10 +1,12 @@
 <template>
   <div class="hello">
-    <img :src="'./首頁背景.JPG'" />
-    <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !p.img}">
-      <router-link :to = "'/p/' + idx">
-        <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
-      </router-link>
+    <div class="ui container">
+      <img :src="'./首頁背景.JPG'" />
+      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !p.img}">
+        <router-link :to = "'/p/' + idx">
+          <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +37,7 @@ a {
 
 div {
   line-height: 1.2;
+  text-align: left;
 }
 
 .hidden {
