@@ -3,9 +3,15 @@
     <vue-headful title="首頁"/>
      <div class="ui grid container">
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '昆蟲與節肢動物類' || !p.img }" >
-        <router-link :to = "'/p/' + idx">
-          <div><img class = "tiny" :src="p.img"/>{{p.user}}說:{{p.text.substr(0,30)}}...</div>
-        </router-link>
+          
+          <div class="six wide column">
+            <img class = "small" :src="p.img"/>
+          </div>
+
+          <div class="ten wide column name">
+            <router-link :to = "'/p/' + idx">{{p.user}}說:{{p.text.substr(0,30)}}...
+            </router-link>
+          </div>
       </div>
       <div class="ui row">
         <div class="six wide column">
@@ -25,8 +31,12 @@
         </div>
       </div>
       <div class="ui row">
-        <img class = "fat-only" :src="'./DSC09821.JPG'"/>
-        <p>白條綠金龜</p>
+        <div class="six wide column">
+          <img class = "small" :src="'./DSC09821.JPG'"/>
+        </div>
+        <div class="ten wide column name">
+          <p>白條綠金龜</p>
+        </div>
       </div>
     </div>
   </div>
@@ -63,7 +73,7 @@ img {
 }
 
 img.small {
-  width: 100%;
+  width: 300px;
 }
 
 .hidden {
@@ -76,8 +86,4 @@ img.small {
   display: none !important;
 }
 
-img.tiny {
-  height: 6em;
-  width: auto;
-}
 </style>
