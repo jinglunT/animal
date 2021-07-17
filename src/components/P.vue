@@ -56,6 +56,7 @@ export default {
 <style scoped>
 #editor {
   margin: 0;
+  width: 66vw;
   height: 80vh;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #333;
@@ -63,6 +64,7 @@ export default {
 
 textarea,
 #editor div {
+  width: 100vw;
   display: inline-block;
   height: 100%;
   vertical-align: top;
@@ -81,11 +83,12 @@ a {
 }
 
 img {
-  width: 33%;
+  width: 33vw;
   float: left;
 }
 
 .inline {
+  width: 50vw !important;
   display: inline-block;
 }
 </style>
