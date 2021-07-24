@@ -1,27 +1,17 @@
 <template>
   <div class="hello">
    <div class="ui grid container">
-      <div class="ui stackable row">
+      <div class="ui stackable row" v-for="(p,idx) in r" :key="idx">
         <div class="six wide column">
-          <img class = "small" :src="'./IMG_7680.JPG'"/>
+          <router-link :to = "'/p/' + idx">
+            <img class = "small" :src="p.i"/>
+          </router-link>
         </div>
+
         <div class="ten wide column name">
-          <router-link to ="/reptiles2" target="_blank">豹紋守宮 Eublepharis macularius</router-link>
-          <p>豹紋守宮因外型討喜，在國內外成為了相當</p>
-          <p>熱門的寵物，飼養方面也不難，只要注意好</p>
-          <p>幾件事，就可以讓牠們過得很好了。</p>
-        </div>
-      </div>
-      
-      <div class="ui stackable row">
-        <div class="six wide column">
-          <img class = "small" :src="'./IMG_7719.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          <router-link to ="/reptiles3" target="_blank">肥尾守宮 Hemitheconyx caudicinctus</router-link>
-          <p>肥尾守宮的個性溫和，但是較為膽小，剛入手</p>
-          <p>的個體經常容易受的驚嚇，需要一段時間培養</p>
-          <p>信任感才適合上手。</p>
+          <router-link :to = "'/p/' + idx">{{p.t}}
+          </router-link>
+          <p>{{p.p}}</p>
         </div>
       </div>
       <div class="ui stackable row">
@@ -54,7 +44,8 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
-    post: Array
+    post: Array,
+    r: Array
   },
   methods: {
     getTitle(t) {
