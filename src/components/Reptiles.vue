@@ -14,14 +14,6 @@
           <p>{{p.p}}</p>
         </div>
       </div>
-      <div class="ui stackable row">
-        <div class="six wide column">
-          <img class="small" :src="'./IMG_4451.jpg'">
-        </div>
-        <div class="ten wide column name">
-          <p>睫角守宮</p>
-        </div>
-      </div>
       <hr/>
       <div v-for="(p,idx) in post" class="ui stackable row" :key="idx" :class="{hidden: p.type != '爬蟲類' || !p.img}" >
         <div class="six wide column">
