@@ -29,7 +29,9 @@
       <hr/>
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '水族類' || !p.img}" >
         <div class="six wide column">
-          <img class = "small" :src="p.img"/>
+          <router-link :to = "'/p/' + idx">
+            <img class = "small" :src="p.img"/>
+          </router-link>
         </div>
 
         <div class="ten wide column name">
