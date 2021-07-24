@@ -7,11 +7,11 @@
 
       <div class="ui form">
         <div class="ui input">
-          <input type="text" name="" v-model="key" placeholder="關鍵字查詢" />
+          <input type="text" autofocus="autofocus" name="" v-model="key" placeholder="關鍵字查詢" />
         </div>
       </div>
       <br/>
-      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !p.img}">
+      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !key || !p.img}">
         <router-link :to = "'/p/' + idx" v-show="(!key || (p.user + p.text).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.img"/>{{getTitle(p.text)}}</div>
         </router-link>
