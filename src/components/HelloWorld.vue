@@ -77,4 +77,9 @@ div {
   float: none;
   margin: 0 auto;
 }
+
+.ui.container {
+  padding-left: 6em;
+}
+
 </style>
