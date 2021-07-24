@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     getTitle(t) {
-      return t.match(/^#\s*(\w*)\s/)[1]
+      return (t.match((/^\s*#\s*(\S+)\n?/)) || ['',''])[1]
     }
   }
 }
