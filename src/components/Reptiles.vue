@@ -32,13 +32,14 @@
           <p>睫角守宮</p>
         </div>
       </div>
+      <hr/>
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '爬蟲類' || !p.img}" >
         <div class="six wide column">
           <img class = "small" :src="p.img"/>
         </div>
 
         <div class="ten wide column name">
-          <router-link :to = "'/p/' + idx">{{p.user}}說:{{p.text.substr(0,30)}}...
+          <router-link :to = "'/p/' + idx">{{getTitle(p.text)}}
           </router-link>
         </div>
       </div>
@@ -52,6 +53,11 @@ export default {
   props: {
     msg: String,
     post: Array
+  },
+  methods: {
+    getTitle(t) {
+      return t.match(/^#\s*(\w*)\s/)[1]
+    }
   }
 }
 </script>

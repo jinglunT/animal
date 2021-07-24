@@ -34,7 +34,7 @@
           </div>
 
           <div class="ten wide column name">
-            <router-link :to = "'/p/' + idx">{{p.user}}說:{{p.text.substr(0,30)}}...
+            <router-link :to = "'/p/' + idx">{{getTitle(p.text)}}
             </router-link>
           </div>
       </div>
@@ -48,6 +48,11 @@ export default {
   props: {
     msg: String,
     post: Array
+  },
+  methods: {
+    getTitle(t) {
+      return t.match(/^#\s*(\w*)\s/)[1]
+    }
   }
 }
 </script>

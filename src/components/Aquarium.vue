@@ -26,6 +26,7 @@
           紫身枝牙蝦虎
         </div>
       </div>
+      <hr/>
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '水族類' || !p.img}" >
         <div class="six wide column">
           <img class = "small" :src="p.img"/>
