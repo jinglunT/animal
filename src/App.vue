@@ -1,6 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav" class="ui menu">
+    <div id="nav" class="ui menu fat-only">
+      <router-link class="item" to="/">首頁</router-link>
+      <router-link class="item" to="/about">影音</router-link>
+      <router-link class="item" to="/aquarium">水族類</router-link>
+      <router-link class="item" to="/reptiles">爬蟲類</router-link>
+      <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
+      <router-link class="item" to="/post">發文</router-link>
+    </div>
+    <div id="nav" class="thin-only ui vertical menu">
       <router-link class="item" to="/">首頁</router-link>
       <router-link class="item" to="/about">影音</router-link>
       <router-link class="item" to="/aquarium">水族類</router-link>
@@ -83,5 +91,20 @@ p {
 
 hr {
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .fat-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .thin-only {
+    display: none !important;
+  }
+}
+body {
+  width: 100vw;
 }
 </style>
