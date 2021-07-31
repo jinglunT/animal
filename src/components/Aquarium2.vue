@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
-    <p>紫身枝牙蝦虎</p>
+    <p>羅氏裸身蝦虎</p>
+    <p>羅氏裸身蝦虎是一種洄游性的小型蝦虎</p>
   </div>
 </template>
 
