@@ -36,6 +36,7 @@ export default {
   props: {
     msg: String,
     post: Array,
+    a: Array,
     r: Array
   },
   data () {
