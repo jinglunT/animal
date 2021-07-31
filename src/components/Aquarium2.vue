@@ -2,8 +2,12 @@
   <div class="hello">
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
     <h2>羅氏裸身蝦虎</h2>
+    <div class="ui container">
+      <div class="block">
     <p>羅氏裸身蝦虎是一種洄游性的小型蝦虎，牠們居住在溪流的底層，擁有相當厲害的擬態能力，羅氏裸身蝦虎有著</p>
     <p>黑白相間的體色，偽裝成溪裡的砂石，因此又被稱為熊貓蝦虎。</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,5 +38,13 @@ a {
 }
 img {
   width: 60%;
+}
+.ui.container {
+  margin: 0 auto;
+}
+
+.block {
+  max-width: 800px;
+  margin: 0 auto;
 }
 </style>
