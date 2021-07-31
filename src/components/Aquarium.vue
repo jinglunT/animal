@@ -1,29 +1,17 @@
 <template>
   <div class="hello">
     <div class="ui grid container">
-      <div class="ui row">
+      <div class="ui stackable row" v-for="(p,idx) in a" :key="idx">
         <div class="six wide column">
-          <img class = "small" :src="'./IMG_9503.JPG'"/>
+          <router-link :to = "'/p/' + idx">
+            <img class = "small" :src="p.i"/>
+          </router-link>
         </div>
+
         <div class="ten wide column name">
-          <router-link to ="/aquarium2" target="_blank">羅氏裸身蝦虎</router-link>
-        </div>
-      </div>
-      <hr>
-      <div class="ui row">
-        <div class="six wide column">
-          <img class = "small" :src="'./IMG_9503.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          <router-link to ="/aquarium3" target="_blank">短吻紅斑吻蝦虎</router-link>
-        </div>
-      </div>
-      <div class="ui row">
-        <div class="six wide column">
-          <img class = "small" :src="'./IMG_9503.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          紫身枝牙蝦虎
+          <router-link :to = "'/p/' + idx">{{p.t}}
+          </router-link>
+          <p>{{p.p}}</p>
         </div>
       </div>
       <hr/>
@@ -48,7 +36,8 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
-    post: Array
+    post: Array,
+    a: Array
   },
   methods: {
     getTitle(t) {
