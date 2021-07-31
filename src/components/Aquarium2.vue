@@ -2,7 +2,7 @@
   <div class="hello">
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
     <p>羅氏裸身蝦虎</p>
-    <p>羅氏裸身蝦虎是一種洄游性的小型蝦虎</p>
+    <p>羅氏裸身蝦虎是一種洄游性的小型蝦虎，牠們居住在溪流的底層，擁有相當厲害的擬態能力</p>
   </div>
 </template>
 
