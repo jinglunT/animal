@@ -98,6 +98,7 @@ p {
   /* margin-left: 31%; */
   margin-top: 2em;
   white-space: pre-line;
+  font-size: 16px;
 }
 
 hr {
