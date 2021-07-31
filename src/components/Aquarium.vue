@@ -3,13 +3,13 @@
     <div class="ui grid container">
       <div class="ui stackable row" v-for="(p,idx) in a" :key="idx">
         <div class="six wide column">
-          <router-link :to = "'/p/' + idx">
+          <router-link :to = "p.to">
             <img class = "small" :src="p.i"/>
           </router-link>
         </div>
 
         <div class="ten wide column name">
-          <router-link :to = "'/p/' + idx">{{p.t}}
+          <router-link :to = "p.to">{{p.t}}
           </router-link>
           <p>{{p.p}}</p>
         </div>
