@@ -95,4 +95,8 @@ div {
   padding-left: 6em;
 }
 
+.ui.row {
+  margin: .5em 0;
+}
+
 </style>
