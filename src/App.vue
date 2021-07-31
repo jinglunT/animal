@@ -117,4 +117,7 @@ hr {
 body {
   width: 100vw;
 }
+hr {
+  border-color: #67706A
+}
 </style>

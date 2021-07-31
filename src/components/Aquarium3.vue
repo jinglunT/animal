@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
-    <p>紫身枝牙蝦虎</p>
+    <p>短吻紅斑吻蝦虎</p>
   </div>
 </template>
 

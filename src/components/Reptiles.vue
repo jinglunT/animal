@@ -13,8 +13,8 @@
           </router-link>
           <p>{{p.p}}</p>
         </div>
+       <hr/>
       </div>
-      <hr/>
       <div v-for="(p,idx) in post" class="ui stackable row" :key="idx" :class="{hidden: p.type != '爬蟲類' || !p.img}" >
         <div class="six wide column">
           <router-link :to = "'/p/' + idx">
