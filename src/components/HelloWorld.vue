@@ -11,6 +11,11 @@
         </div>
       </div>
       <br/>
+      <div v-for="(p,idx) in a" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
+        <router-link :to = "p.to" v-show="(!key || (p.t + p.p).indexOf(key) > -1 )">
+          <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
+        </router-link>
+      </div>
       <div v-for="(p,idx) in r" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>

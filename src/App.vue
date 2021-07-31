@@ -16,7 +16,7 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
     </div>
-    <router-view :post="post" :r="r"/>
+    <router-view :post="post" :r="r" :a="a"/>
   </div>
 </template>
 
@@ -29,6 +29,7 @@ export default {
     return {
       post: [],
       r: [],
+      a: [],
       name: '',
       text: '',
     }
@@ -41,6 +42,9 @@ export default {
   mounted () {
     this.axios.get('./r.json').then((response) => {
       this.r = response.data
+    })
+    this.axios.get('./a.json').then((response) => {
+      this.a = response.data
     })
   }
 }
