@@ -58,7 +58,7 @@ export default {
       img: '',
       type: '水族類',
       name: '訪客',
-      input: '# hello'      
+      input: '# 標題\n\n這裡是內容\n\n[Markdown語法教學](https://markdown.tw/)\n\n![圖片範例](https://i.imgur.com/cfnHeJE.jpeg)\n\n更多內容'      
     }
   },
   methods: {
