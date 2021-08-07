@@ -14,7 +14,7 @@
       <button v-for="t in tags" :key="t" @click="key=t">{{t}}</button>
       <br/>
       <div v-for="(p,idx) in a" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
-        <router-link :to = "p.to" v-show="(!key || (p.t + p.p).indexOf(key) > -1 )">
+        <router-link :to = "p.to" v-show="(!key || (p.t + p.type + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
       </div>
