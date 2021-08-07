@@ -13,6 +13,8 @@
       <br/>
       <button v-for="t in tags" :key="t" @click="key=t">{{t}}</button>
       <br/>
+      <h3 v-show="nothing()">抱歉，目前還沒有該關鍵字的文章</h3>
+      <br/>
       <div v-for="(p,idx) in a" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.type + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
@@ -48,6 +50,11 @@ export default {
     }
   },
   methods: {
+    nothing() {
+      const arr = this.a.concat(this.r).concat(this.post);
+      const k = this.key;
+      return arr.filter((o) => { return (o.t + o.type + o.p).indexOf(k) > -1 }).length == 0
+    },
     getTitle(t) {
       return (t.match((/^\s*#\s*(\S+)\n?/)) || ['',''])[1]
     }
