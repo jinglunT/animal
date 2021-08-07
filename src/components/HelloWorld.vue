@@ -44,7 +44,7 @@ export default {
   data () {
     return {
       key: '',
-      tags: ['水族', '昆蟲']
+      tags: ['水族', '昆蟲', '兜蟲', '鍬形蟲', '守宮', '陸龜', '澤龜', '箱龜', '睫角守宮', ]
     }
   },
   methods: {
