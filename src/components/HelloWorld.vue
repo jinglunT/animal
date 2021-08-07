@@ -11,7 +11,11 @@
         </div>
       </div>
       <br/>
-      <button v-for="t in tags" :key="t" @click="key=t">{{t}}</button>
+      <button v-for="t in tags0" :key="t" @click="key=t">{{t}}</button>
+      <br/>
+      <button v-for="t in tags1" :key="t" @click="key=t">{{t}}</button>
+      <br/>
+      <button v-for="t in tags2" :key="t" @click="key=t">{{t}}</button>
       <br/>
       <h3 v-show="nothing()">抱歉，目前還沒有該關鍵字的文章</h3>
       <br/>
@@ -46,7 +50,9 @@ export default {
   data () {
     return {
       key: '',
-      tags: ['水族', '昆蟲', '兜蟲', '鍬形蟲', '守宮', '陸龜', '澤龜', '箱龜', '睫角守宮', ]
+      tags0: ['水族'],
+      tags1: ['昆蟲', '兜蟲', '鍬形蟲'],
+      tags2: ['守宮', '陸龜', '澤龜', '箱龜', '睫角守宮']
     }
   },
   methods: {
