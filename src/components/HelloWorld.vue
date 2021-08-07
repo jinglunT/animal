@@ -19,17 +19,17 @@
       <br/>
       <h3 v-show="nothing()">抱歉，目前還沒有該關鍵字的文章</h3>
       <br/>
-      <div v-for="(p,idx) in a" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
+      <div v-for="(p,idx) in a" class="ui row" :key="'a' + idx" :class="{hidden: !key || key == '' || !p.i}">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.type + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
       </div>
-      <div v-for="(p,idx) in r" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.i}">
+      <div v-for="(p,idx) in r" class="ui row" :key="'r' + idx" :class="{hidden: !key || key == '' || !p.i}">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
       </div>
-      <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: !key || key == '' || !p.img}">
+      <div v-for="(p,idx) in post" class="ui row" :key="'post' + idx" :class="{hidden: !key || key == '' || !p.img}">
         <router-link :to = "'/p/' + idx" v-show="(!key || (p.user + p.text).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.img"/>{{getTitle(p.text)}}</div>
         </router-link>
