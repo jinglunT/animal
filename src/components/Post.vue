@@ -58,7 +58,7 @@ export default {
       img: '',
       type: '水族類',
       name: '訪客',
-      input: '# hello'      
+      input: '# 標題\n\n這裡是內容'      
     }
   },
   methods: {
