@@ -16,32 +16,6 @@
         </div>
        <hr/>
       </div>
-
-      <div class="ui row">
-        <div class="six wide column">
-          <img class = "small" :src="'./DSC09821.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          <router-link to ="/insect2" target="_blank">印尼金鍬</router-link>
-        </div>
-      </div>
-      <hr>
-      <div class="ui row">
-        <div class="six wide column">
-          <img class = "small" :src="'./DSC09821.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          <router-link to ="/insect3" target="_blank">櫻桃紅蟑</router-link>
-        </div>
-      </div>
-      <div class="ui row">
-        <div class="six wide column">
-          <img class = "small" :src="'./DSC09821.JPG'"/>
-        </div>
-        <div class="ten wide column name">
-          <p>白條綠金龜</p>
-        </div>
-      </div>
       <div v-for="(p,idx) in post" class="ui row" :key="idx" :class="{hidden: p.type != '昆蟲與節肢動物類' || !p.img }" >          
           <div class="six wide column">
             <router-link :to = "'/p/' + idx">
