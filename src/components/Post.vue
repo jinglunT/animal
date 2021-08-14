@@ -9,6 +9,9 @@
       <li v-show="more">如果有推薦的飼料或用品或店家，都是可以分享出來的，不過請不要變成打廣告。</li>
       <li v-show="more">如要文內附圖，請用markdown語法：![替代文字](圖片網址)</li>
       <li v-show="more"><img src="螢幕擷取畫面 (389).jpg"></li>
+      <li v-show="more">
+        <button @click="more = false">縮回</button>
+      </li>
     </ol>
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
