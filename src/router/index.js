@@ -8,9 +8,10 @@ import Aquarium4 from '../components/Aquarium4.vue'
 import Reptiles from '../components/Reptiles.vue'
 import Reptiles2 from '../components/Reptiles2.vue'
 import Reptiles3 from '../components/Reptiles3.vue'
-import Insect from '../components/Insect.vue'
+import Insect from '../components/Bug.vue'
 import Insect2 from '../components/Insect2.vue'
 import Insect3 from '../components/Insect3.vue'
+import Insect4 from '../components/Insect4.vue'
 import Post from '../components/Post.vue'
 import P from '../components/P.vue'
 
@@ -77,6 +78,11 @@ const routes = [
     path: '/insect3',
     name: 'Insect3',
     component: Insect3
+  },
+       {
+    path: '/insect4',
+    name: 'Insect4',
+    component: Insect4
   },
    {
     path: '/',

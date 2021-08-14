@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <h2>印尼金鍬</h2>
+    <h2>櫻桃紅蟑</h2>
     <img class = "fat-only" :src="'./DSC09821.JPG'"/>
-    <h4>印尼金鍬</h4>
+    <p>櫻桃紅蟑</p>
   </div>
 </template>
 
