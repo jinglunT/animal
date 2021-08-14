@@ -58,7 +58,7 @@ export default {
       img: '',
       type: '水族類',
       name: '訪客',
-      input: '# 標題用井字號開頭\n\n內容直接打字\n\n[Markdown語法教學](https://markdown.tw/)\n\n![圖片範例](https://i.imgur.com/cfnHeJE.jpeg)\n\n更多內容'      
+      input: '# 標題'
     }
   },
   methods: {
