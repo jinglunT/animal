@@ -16,7 +16,9 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
     </div>
-    <router-view :post="post" :r="r" :a="a"/>
+    <div id ="main">
+      <router-view :post="post" :r="r" :a="a"/>
+    </div>
   </div>
 </template>
 
@@ -69,6 +71,11 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+#nav a:hover {
+  background-color: #999;
+}
+
 body {
   background-color: #272a29
 }
@@ -80,9 +87,19 @@ body {
 img, iframe {
   border-radius: 15px;
 }
+
 a {
   font-size: 23px
 }
+
+#main a:hover {
+  text-decoration: underline;
+}
+
+#main a img:hover {
+  opacity: 0.8;
+}
+
 .name {
   padding-top: 2em
 }

@@ -118,4 +118,8 @@ div {
   margin: .5em 0;
 }
 
+button:hover {
+  background-color: #999;
+}
+
 </style>
