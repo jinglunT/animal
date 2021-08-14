@@ -50,7 +50,7 @@ export default {
       this.a = response.data
     })
     this.axios.get('./i.json').then((response) => {
-      this.a = response.data
+      this.i = response.data
     })
   }
 }

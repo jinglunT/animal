@@ -2,6 +2,20 @@
   <div class="hello">
     <vue-headful title="首頁"/>
      <div class="ui grid container">
+      <div class="ui stackable row" v-for="(p,idx) in i" :key="idx">
+        <div class="six wide column">
+          <router-link :to = "p.to">
+            <img class = "small" :src="p.i"/>
+          </router-link>
+        </div>
+
+        <div class="ten wide column name">
+          <router-link :to = "p.to">{{p.t}}
+          </router-link>
+          <p>{{p.p}}</p>
+        </div>
+       <hr/>
+      </div>
 
       <div class="ui row">
         <div class="six wide column">
@@ -49,6 +63,7 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+    i: Array,
     post: Array
   },
   methods: {
