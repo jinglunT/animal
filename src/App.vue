@@ -17,7 +17,7 @@
       <router-link class="item" to="/post">發文</router-link>
     </div>
     <div id ="main">
-      <router-view :post="post" :r="r" :a="a"/>
+      <router-view :post="post" :r="r" :a="a" :i="i"/>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
       post: [],
       r: [],
       a: [],
+      i: [],
       name: '',
       text: '',
     }
@@ -46,6 +47,9 @@ export default {
       this.r = response.data
     })
     this.axios.get('./a.json').then((response) => {
+      this.a = response.data
+    })
+    this.axios.get('./i.json').then((response) => {
       this.a = response.data
     })
   }
