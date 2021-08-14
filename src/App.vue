@@ -7,6 +7,9 @@
       <router-link class="item" to="/reptiles">兩棲與爬蟲類</router-link>
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
+      <div class="item">
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fjinglunt.github.io%2Fanimal%2F&layout=button_count&size=small&width=71&height=20&appId" width="71" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
     </div>
     <div id="nav" class="thin-only ui vertical menu">
       <router-link class="item" to="/">首頁</router-link>
