@@ -5,8 +5,9 @@
    <ol>
       <li>本網站對於文章的內容是相當開放的，文章中出現少量髒話也ok，但請不要變成人身攻擊。</li>
       <li>如果出現被寵物咬傷或是寵物受傷的畫面，請在文章開頭先提醒讀者。</li>
-      <li>如果有推薦的飼料或用品或店家，都是可以分享出來的，不過請不要變成打廣告。</li>
-      <li>如要文內附圖，請用markdown語法：![替代文字](圖片網址)</li>
+      <li v-show="!more"><button @click="more = true">看更多</button></li>
+      <li v-show="more">如果有推薦的飼料或用品或店家，都是可以分享出來的，不過請不要變成打廣告。</li>
+      <li v-show="more">如要文內附圖，請用markdown語法：![替代文字](圖片網址)</li>
     </ol>
     <form>
       <input type="text" name="" v-model="name" placeholder="您的大名" />
@@ -52,6 +53,7 @@ export default {
   },
   data(){
     return {
+      more: false,
       hasImage: false,
       previewImage:null,
       post: [],
