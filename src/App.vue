@@ -45,6 +45,7 @@ export default {
       r: [],
       a: [],
       i: [],
+      key: '',
       name: '',
       text: '',
     }
