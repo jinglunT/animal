@@ -28,7 +28,7 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
     </div>
-          <div v-for="(p,idx) in a" class="ui row" :key="'a' + idx" :class="{hidden: !key || key == '' || !p.i}">
+    <div v-for="(p,idx) in a" class="ui row" :key="'a' + idx" :class="{hidden: !key || key == '' || !p.i}">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.type + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
@@ -69,6 +69,14 @@ export default {
     post: db.collection('post'),
   },
   methods: {
+    nothing() {
+      const arr = this.a.concat(this.r).concat(this.post);
+      const k = this.key;
+      return arr.filter((o) => { return (o.t + o.type + o.p).indexOf(k) > -1 }).length == 0
+    },
+    getTitle(t) {
+      return (t.match((/^\s*#\s*(\S+)\n?/)) || ['',''])[1]
+    }
   },
   mounted () {
     this.axios.get('./r.json').then((response) => {
@@ -128,6 +136,10 @@ a {
   text-decoration: underline;
 }
 
+img {
+  width: 420px;
+}
+
 #main a img:hover {
   opacity: 0.8;
 }
@@ -171,4 +183,9 @@ body {
 hr {
   border-color: #67706A
 }
+
+.hidden {
+  display: none;
+}
+
 </style>
