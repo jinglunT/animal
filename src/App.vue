@@ -28,17 +28,17 @@
       <router-link class="item" to="/insect">昆蟲與節肢動物</router-link>
       <router-link class="item" to="/post">發文</router-link>
     </div>
-    <div v-for="(p,idx) in a" class="ui row" :key="'a' + idx" :class="{hidden: !key || key == '' || !p.i}">
+    <div v-for="(p,idx) in a" class="ui row" :key="'a' + idx" :class="{hidden: !key || key == '' || !p.i}" @click="key=''">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.type + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
       </div>
-      <div v-for="(p,idx) in r" class="ui row" :key="'r' + idx" :class="{hidden: !key || key == '' || !p.i}">
+      <div v-for="(p,idx) in r" class="ui row" :key="'r' + idx" :class="{hidden: !key || key == '' || !p.i}" @click="key=''">
         <router-link :to = "p.to" v-show="(!key || (p.t + p.p).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.i"/>{{p.t}}</div>
         </router-link>
       </div>
-      <div v-for="(p,idx) in post" class="ui row" :key="'post' + idx" :class="{hidden: !key || key == '' || !p.img}">
+      <div v-for="(p,idx) in post" class="ui row" :key="'post' + idx" :class="{hidden: !key || key == '' || !p.img}" @click="key=''">
         <router-link :to = "'/p/' + idx" v-show="(!key || (p.user + p.text).indexOf(key) > -1 )">
           <div><img class = "tiny" :src="p.img"/>{{getTitle(p.text)}}</div>
         </router-link>
