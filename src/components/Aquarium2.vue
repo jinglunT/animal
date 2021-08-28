@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img class = "fat-only" :src="'./IMG_9503.JPG'"/>
+    <img class = "fat-only" :src="'./IMG_8192.JPG'"/>
     <h2>羅氏裸身蝦虎</h2>
     <div class="ui container">
       <div class="block">
