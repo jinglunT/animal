@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-  <img :src="'/IMG_7680.JPG'">
+  <img :src="'./IMG_7680.JPG'">
   <h2>豹紋守宮</h2>
   <h4>飼養環境 : </h4>
 
