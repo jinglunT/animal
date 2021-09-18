@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-  <img :src="'/IMG_4451.jpg'">
+  <img :src="'./IMG_4451.jpg'">
   <p>睫角守宮</p>
   </div>
 </template>
